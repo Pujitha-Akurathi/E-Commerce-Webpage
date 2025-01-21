@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="cart.js"></script>
+    <link href="st1.css" rel="stylesheet">
+    <script src="sc1.js"></script>
+    <style>
+    
+
+      select{
+        border: solid 1px;
+        padding: 7px 16px;
+        border-radius:5px;
+      }
+      select:focus{
+        outline: solid;
+      }
+      .banner{
+        height:92vh;
+        background-image: url("https://img.freepik.com/free-photo/colorful-shopping-bags_23-2147652050.jpg?w=996&t=st=1700230584~exp=1700231184~hmac=6d766b29de07c1a03ed23395fa7af3930a76f429331143dc150627a07d3a714a");
+        background-position: center;
+        background-size: cover;
+      }
+      .banner h5{
+        color:#EE1C47;
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+      .banner h1{
+        color: black;
+        font-size: 65px;
+        text-transform: capitalize;
+        line-height: 1.1;
+        font-weight: 600;
+      }
+      .banner p{
+        color:#333c56;
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+      
+      .highlight{
+        color:red;
+      }
+      .features img{
+        width:200px;
+        height:200px;
+      }
+      
+      .footer-section {
+        background-color: #0d2436;
+      }
+      .footer-section-mail-id {
+        color: #959ead;
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      .footer-section-address {
+        color: #959ead;
+        font-family: "Roboto";
+        font-size: 14px;
+      }
+      .movie:hover {
+      transform: scale(1.02);
+      }
+      #movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      opacity: 0.5;
+      }
+      .logo-img {
+    max-width: 80px;
+    height:50px;
+    transition: transform 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+ /* Reduce padding of the navbar */
+ .navbar {
+    padding: 0.6rem 1rem; /* Adjust top/bottom and left/right padding */
+  }
+
+  /* Adjust the height of the logo image */
+  .navbar .logo-img {
+    max-height: 50px; /* Reduce the logo height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.7rem 0.8rem; /* Adjust padding inside links */
+  }
+
+  /* Adjust the navbar-toggler button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Smaller button */
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="mainpage.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ05aBieff9Y2WkD_CgiPJzNqdj1byJkDSUFY1E4lU2usC8azw6ttQVU6-BK78f1ERPdQ&usqp=CAU" alt="Logo" class="logo-img">
+        </a>
+        <a class="navbar-brand" href="#">ShopEase</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-auto">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="mainpage.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="fashion.html">Fashion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="electronics.html">
+                      Electronics
+                    </a>
+                    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="grocery.html">
+                      Groceries
+                    </a>
+                    
+                  </li>
+                  <a href="cartpage.html"><li class="nav-item"><i  class="bi bi-cart4 nav-link"></i></li></a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="loginform.html"><i class="bi bi-person-circle"></i></a>
+                  </li>
+                </ul>
+                
+              </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 banner d-flex flex-column justify-content-center mb-5">
+            <h5>Winter Collection</h5>
+          <h1>New Winter <br> Collection</h1>
+          <p>There's Nothing like Trend</p>
+          <a href="fashion.html"><button class="main-btn" style="color:#111;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+            border:2px solid #111;
+            padding:12px 25px;
+            transition: all .42s ease;
+            width: 200px; ">Explore Now</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 text-center">
+            <div class="features">
+              <img src="https://img.freepik.com/free-vector/free-delivery-logo-with-bike-man-courier_1308-48905.jpg?w=740&t=st=1700217818~exp=1700218418~hmac=c7d54da4762befe06b6cd336ddfd1150dbf4bffeecdf6d29d6e614d84a54389d" alt="">
+              <p>Free Shipping</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 text-center">
+            <div class="features">
+              <img src="https://img.freepik.com/premium-vector/express-delivery-label-timer-sticker_212474-452.jpg?w=826" alt="">
+              <p>Fast & Safe Delivery</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 text-center">
+            <div class="features">
+              <img src="https://img.freepik.com/free-vector/exchange-old-product-new-banner-design_1017-33513.jpg?w=996&t=st=1700217672~exp=1700218272~hmac=7627fce7249f8f7e32ff8192f7e629474f03ea09574dbe083d40a43ba5b767be" alt="">
+              <p>Exchange Offers</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 mb-3 text-center">
+            <div class="features">
+              <img src="https://img.freepik.com/free-vector/service-24-7-concept-illustration_114360-7500.jpg?w=740&t=st=1700217702~exp=1700218302~hmac=0e7e6a5c51d45e36f25d6ca3022599146a5ce1694cda2befb7d480adb44d8d82" alt="">
+              <p>f24/7 support</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h4>Our <span class="highlight">Trending</span> Deals</h4>
+            <br>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <div class="products text-center">
+              <img src="https://images.meesho.com/images/products/209435696/7y9ez_512.webp" alt="">
+              <div class="product_info">
+                <h5>Baby Girl Dress</h5>
+                <div class="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="col-10 order-0 ml-3">
+                    <h4>499/-</h4>
+                  </div>
+                </div>
+                <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal9">View Details</button>
+              </div>
+            </div>
+          </div>
+  <!-- Modal for Baby Girl Dress -->
+  <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModal9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal9Label">Baby Girl Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.meesho.com/images/products/209435696/7y9ez_512.webp" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Meesho</p>
+          <p><strong>Description:</strong> A cute and comfortable baby girl dress, perfect for daily wear and special occasions.</p>
+          <p><strong>Price:</strong> 499/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(109, 'Baby Girl Dress', 499, 'https://images.meesho.com/images/products/209435696/7y9ez_512.webp')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+          <div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg" alt="">
+      <div class="product_info">
+        <h5>Stretch Slim Fit Jeans</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>1899/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal16">View Details</button>
+      </div>
+    </div>
+  </div>
+   <!-- Modal for Stretch Slim Fit Jeans -->
+   <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModal16Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal16Label">Stretch Slim Fit Jeans</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Stretch</p>
+          <p><strong>Description:</strong> Comfortable and stylish slim fit jeans with a super stretch fabric. Ideal for casual wear.</p>
+          <p><strong>Price:</strong> 1899/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(116, 'Stretch Slim Fit Jeans', 1899, 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          <div class="col-12 col-md-3 mb-3">
+            <div class="products text-center">
+              <img src="https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg" alt="">
+              <div class="product_info">
+                <h5>Kurta and Dhoti Pant Set</h5>
+                <div class="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="col-10 order-0 ml-3">
+                    <h4>1399/-</h4>
+                  </div>
+                </div>
+                <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal2">View Details</button>
+               </div>
+            </div>
+          </div>
+          <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModal2Label">Kurta and Dhoti Pant Set</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+                  <p><strong>Brand:</strong> Sultan</p>
+                  <p><strong>Description:</strong> Traditional Kurta and Dhoti Pant Set, ideal for weddings and festive occasions.</p>
+                  <p><strong>Price:</strong> 1399/-</p>
+                  <div class="star"><p><strong>Rating:</strong> 
+                    
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="addToCart(102, 'Kurta and Dhoti Pant Set', 1399, 'https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 mb-3">
+            <div class="products text-center">
+              <img src="https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg" alt="">
+              <div class="product_info">
+                <h5>Ethnic Wear Lehenga</h5>
+                <div class="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="col-10 order-0 ml-3">
+                    <h4>12000/-</h4>
+                  </div>
+                </div>
+                <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal5">View Details</button>
+               </div>
+            </div>
+          </div>
+            <!-- Modal for Ethnic Wear Lehenga -->
+  <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal5Label">Ethnic Wear Lehenga</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Traditional Wear</p>
+          <p><strong>Description:</strong> Elegant Ethnic Lehenga perfect for weddings and traditional celebrations.</p>
+          <p><strong>Price:</strong> 12000/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(106, 'Ethnic Wear Lehenga', 12000, 'https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h4>Our <span class="highlight">Trending</span> Deals</h4>
+            <br>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="products text-center mb-3">
+             <img src="https://t3.ftcdn.net/jpg/00/34/61/76/360_F_34617669_p9r4GrR83TBEXCZrRny6AaigqPUEPFp5.jpg" alt="">
+               <div class="product_info">
+                 <h5>Tomatoes</h5>
+                  <div class="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+            </div>
+             <div class="d-flex flex-row">
+               <div class="col-10 order-0 ml-3"><h4>120/- KG</h4></div>
+              </div>
+            <select name="Quantity">
+            <option value="Quantity">Quantity</option>
+               <option value="2KG">2kgs</option>
+            <option value="1KG">1kg</option>
+             <option value="500gms" >500gm</option>
+              <option value="250GM">250gms</option>
+              </select><br><br>
+              <button class="main-btn" onclick="addToCart(66, 'Tomatoes', 120, 'https://t3.ftcdn.net/jpg/00/34/61/76/360_F_34617669_p9r4GrR83TBEXCZrRny6AaigqPUEPFp5.jpg')">Add to cart</button>
+               </div>
+               </div>
+              </div>
+
+         
+           <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+           <img src="https://andamangreengrocers.com/wp-content/uploads/2021/12/1639841398071.jpg" alt="">
+             <div class="product_info">
+         <h5>Brinjal</h5>
+            <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          </div>
+          <div class="d-flex flex-row">
+           <div class="col-10 order-0 ml-3"><h4>80/- KG</h4></div>
+          </div>
+         <select name="Quantity">
+          <option value="Quantity">Quantity</option>
+         <option value="2KG">2kgs</option>
+          <option value="1KG">1kg</option>
+          <option value="500gms" >500gm</option>
+          <option value="250GM">250gms</option>
+           </select><br><br>
+            <button class="main-btn" onclick="addToCart(65, 'Brinjal', 80, 'https://andamangreengrocers.com/wp-content/uploads/2021/12/1639841398071.jpg')">Add to cart</button>
+            </div>
+             </div>
+            </div>
+          
+      
+
+
+          <div class="col-12 col-md-3">
+            <div class="products text-center mb-3">
+            <img src="https://thumbs.dreamstime.com/b/red-beets-beetroots-white-background-129418038.jpg" alt="">
+            <div class="product_info">
+            <h5>Beetroot</h5>
+           <div class="star">
+            <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="col-10 order-0 ml-3"><h4>140/- KG</h4></div>
+             </div>
+            <select name="Quantity">
+              <option value="Quantity">Quantity</option>
+               <option value="2KG">2kgs</option>
+             <option value="1KG">1kg</option>
+             <option value="500gms" >500gm</option>
+           <option value="250GM">250gms</option>
+            </select><br><br>
+             <button class="main-btn" onclick="addToCart(62, 'Beetroot', 140, 'https://thumbs.dreamstime.com/b/red-beets-beetroots-white-background-129418038.jpg')">Add to cart</button>
+              </div>
+             </div>
+            </div>
+           
+
+
+      
+        <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+            <img src="https://www.georgeperry.co.uk/images/P/mushrooms.jpg" alt="">
+            <div class="product_info">
+             <h5>Mushrooms</h5>
+            <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-half"></i>
+           </div>
+          <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3"><h4>350/- 200gms</h4></div>
+          </div>
+           <select name="Quantity">
+            <option value="Quantity">Quantity</option>
+             <option value="2KG">2kgs</option>
+           <option value="1KG">1kg</option>
+             <option value="500gms" >500gms</option>
+             <option value="250gms">250gms</option>
+          </select><br><br>
+          <button class="main-btn" onclick="addToCart(70, 'Mushrooms', 350, 'https://www.georgeperry.co.uk/images/P/mushrooms.jpg')">Add to Cart</button>
+          </div>
+            </div>
+            </div>
+    </div>
+  </div>
+
+    
+
+
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h4>Our <span class="highlight">Trending</span> Deals</h4>
+            <br>
+          </div>
+          <div class="container">  
+            <div class="row">
+         <div class="col-12 col-md-3">
+         <div class="products text-center mb-3">
+           <img src="https://m.media-amazon.com/images/I/61u8KxzeX0L.jpg" alt="">
+         <div class="product_info">
+            <h5>Soya chunks</h5>
+            <div class="star">
+             <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+       <i class="bi bi-star-fill"></i>
+       <i class="bi bi-star-half"></i>
+                 </div>
+       <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3"><h4>150/-KG</h4></div>
+             </div>
+           <select name="Quantity">
+       <option value="Quantity">Quantity</option>
+      <option value="2KG">2kgs</option>
+        <option value="1KG">1kg</option>
+             <option value="500gms" >500gm</option>
+         <option value="250GM">250gms</option>
+       </select><br><br>
+         <button class="main-btn" onclick="addToCart(100, 'Soya chunks', 150, 'https://m.media-amazon.com/images/I/61u8KxzeX0L.jpg')">Add to cart</button>
+        </div>
+           </div>
+         </div>
+  
+        <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnP9zimWkW5EUA4IqRjrHhU68ocoUzmpBSw&s" alt="Ragi Flour">
+              <div class="product_info">
+                  <h5>Ragi Flour</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="price"><h4>180/- KG</h4></div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2kgs">2kgs</option>
+                      <option value="1kg">1kg</option>
+                      <option value="500gms">500gms</option>
+                      <option value="250gms">250gms</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(101, 'Ragi Flour', 180, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnP9zimWkW5EUA4IqRjrHhU68ocoUzmpBSw&s')">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  
+      <div class="col-12 col-md-3">
+        <div class="products text-center mb-3">
+          <img src="https://m.media-amazon.com/images/I/71R6dl3HsaL.jpg" alt="">
+          <div class="product_info">
+            <h5>Corn Flour</h5>
+            <div class="star">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="col-10 order-0 ml-3"><h4>120/-KG</h4></div>
+              </div>
+              <select name="Quantity">
+                <option value="Quantity">Quantity</option>
+                 <option value="2KG">2kgs</option>
+                  <option value="1KG">1kg</option>
+                 <option value="500gms" >500gm</option>
+                  <option value="250GM">250gms</option>
+               </select><br><br>
+                <button class="main-btn" onclick="addToCart(101, 'Corn Flour', 120, 'https://m.media-amazon.com/images/I/71R6dl3HsaL.jpg')">Add to cart</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-12 col-md-3">
+        <div class="products text-center mb-3">
+           <img src="https://cpimg.tistatic.com/07382378/b/4/Suji-.jpg" alt="">
+           <div class="product_info">
+           <h5>Sujji</h5>
+         <div class="star">
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+         <div class="d-flex flex-row">
+           <div class="col-10 order-0 ml-3"><h4>250/-KG</h4></div>
+           </div>
+           <select name="Quantity">
+           <option value="Quantity">Quantity</option>
+            <option value="2KG">2kgs</option>
+           <option value="1KG">1kg</option>
+          <option value="500gms" >500gm</option>
+          <option value="250GM">250gms</option>
+         </select><br><br>
+         <button class="main-btn" onclick="addToCart(102, 'Sujji', 250, 'https://cpimg.tistatic.com/07382378/b/4/Suji-.jpg')">Add to cart</button>
+         </div>
+         </div>
+         </div>
+      </div>
+    </div>
+
+
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h4>Our <span class="highlight">Trending</span> Deals</h4>
+              <br>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/HO/QV/NQ/154100906/tim-tim-premium-blueberries-500x500.jpg" alt="">
+                <div class="product_info">
+                  <h5>Blueberries</h5>
+                  <div class="star">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <div class="col-10 order-0 ml-3"><h4>100/-KG</h4></div>
+                    </div>
+                    <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                       <option value="2KG">2kgs</option>
+                        <option value="1KG">1kg</option>
+                       <option value="500gms" >500gm</option>
+                        <option value="250GM">250gms</option>
+                     </select><br><br>
+                      <button class="main-btn" onclick="addToCart(106, 'Blueberries', 100, 'https://5.imimg.com/data5/SELLER/Default/2022/6/HO/QV/NQ/154100906/tim-tim-premium-blueberries-500x500.jpg')">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          <div class="col-12 col-md-3">
+            <div class="products text-center mb-3">
+              <img src="https://regencysnacks.com/cdn/shop/products/DSC_9927_1024x1024@2x.jpg?v=1603892503" alt="">
+              <div class="product_info">
+                <h5>Apricot</h5>
+                <div class="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="col-10 order-0 ml-3"><h4>180/-KG</h4></div>
+                  </div>
+                  <select name="Quantity">
+                    <option value="Quantity">Quantity</option>
+                     <option value="2KG">2kgs</option>
+                      <option value="1KG">1kg</option>
+                     <option value="500gms" >500gm</option>
+                      <option value="250GM">250gms</option>
+                   </select><br><br>
+                    <button class="main-btn" onclick="addToCart(105, 'Apricot', 180, 'https://regencysnacks.com/cdn/shop/products/DSC_9927_1024x1024@2x.jpg?v=1603892503')">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          
+    
+          <div class="col-12 col-md-3">
+            <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/BY/IE/XF/SELLER-39862493/nutraj-signature-pistachio-kernels-100g-vacuum-pack-500x500.jpg" alt="">
+              <div class="product_info">
+               <h5>Pista</h5>
+              <div class="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             </div>
+            <div class="d-flex flex-row">
+            <div class="col-10 order-0 ml-3"><h4>350/-KG</h4></div>
+            </div>
+             <select name="Quantity">
+              <option value="Quantity">Quantity</option>
+               <option value="2KG">2kgs</option>
+             <option value="1KG">1kg</option>
+               <option value="500gms" >500gm</option>
+               <option value="250GM">250gms</option>
+            </select><br><br>
+             <button class="main-btn" onclick="addToCart(109, 'Pista', 350, 'https://5.imimg.com/data5/BY/IE/XF/SELLER-39862493/nutraj-signature-pistachio-kernels-100g-vacuum-pack-500x500.jpg')">Add to cart</button>
+            </div>
+              </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="products text-center mb-3">
+                 <img src="https://www.yumfuell.com/wp-content/uploads/2020/08/K-DATES-F-1.jpg" alt="">
+                   <div class="product_info">
+               <h5>Dates</h5>
+                  <div class="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                </div>
+                <div class="d-flex flex-row">
+                   <div class="col-10 order-0 ml-3"><h4>120/-KG</h4></div>
+                </div>
+               <select name="Quantity">
+                <option value="Quantity">Quantity</option>
+               <option value="2KG">2kgs</option>
+                <option value="1KG">1kg</option>
+                <option value="500gms" >500gm</option>
+                <option value="250GM">250gms</option>
+                 </select><br><br>
+                  <button class="main-btn" onclick="addToCart(111, 'Dates', 120, 'https://www.yumfuell.com/wp-content/uploads/2020/08/K-DATES-F-1.jpg')">Add to cart</button>
+                  </div>
+                   </div>
+                  </div>
+          </div>
+          </div>
+
+
+
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h4>Our <span class="highlight">Trending</span> Deals</h4>
+                <br>
+              </div>
+              <div class="col-12 col-md-3 mb-3">
+                <div class="products text-center">
+                  <img src="https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                  <div class="product_info">
+                    <span>Apple</span>
+                    <h5>iPhone 15 Pro Max</h5>
+                    <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3">
+                        <h4>149999/-</h4>
+                      </div>
+                    </div>
+            <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal1">View Details</button>
+           </div>
+                </div>
+              </div>
+              <!-- Product Modals -1 -->
+      <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModal1Label">iPhone 15 Pro Max</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+              <p><strong>Brand:</strong> Apple</p>
+              <p><strong>Description:</strong> The iPhone 15 Pro Max offers unparalleled performance with its new A17 chip, 5G connectivity, and a pro-level camera system for stunning photos and videos.</p>
+              <p><strong>Price:</strong>  149999/-</p>
+            <!-- Rating with Half Star and Gold Color -->
+            <div class="star"><p><strong>Rating:</strong> 
+            
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="addToCart(121, 'iPhone 15 Pro Max', 149999, 'https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+          
+              
+    
+    
+              <div class="col-12 col-md-3 mb-3">
+                <div class="products text-center">
+                    <img src="https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg" alt="boAt Airdopes 131">
+                    <div class="product_info">
+                        <span>boAt</span>
+                        <h5>boAt Airdopes 131</h5>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-10 order-0 ml-3">
+                                <h4>1,499/-</h4>
+                            </div>
+                        </div>
+                        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal15">View Details</button> 
+                      </div>
+                </div>
+            </div>
+             <!-- Modal for boAt Airdopes 131 -->
+             <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModal15Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModal15Label">boAt Airdopes 131</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg" alt="boAt Airdopes 131" class="img-fluid mb-3 fixed-image-size">
+                          <p><strong>Brand:</strong> boAt</p>
+                          <p><strong>Description:</strong> The boAt Airdopes 131 offers great sound, a sleek design, and long-lasting battery life for a premium wireless earbud experience, featuring Bluetooth 5.0 connectivity.</p>
+                          <p><strong>Price:</strong> 1,499/-</p>
+                          <div class="star"><p><strong>Rating:</strong> 
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                              <i class="bi bi-star"></i>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="addToCart(135, 'boAt Airdopes 131', 1499, 'https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg')">Add to Cart</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+            
+    
+    
+            <div class="col-12 col-md-3 mb-3">
+              <div class="products text-center">
+                  <img src="https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg" alt="Mi Smart Band 5">
+                  <div class="product_info">
+                      <span>Mi</span>
+                      <h5>Mi Smart Band 5</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3">
+                              <h4>2,499/-</h4>
+                          </div>
+                      </div>
+                      <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal12">View Details</button>
+                     </div>
+              </div>
+          </div>
+         
+          <!-- Modal for Mi Smart Band 5 -->
+          <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModal12Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModal12Label">Mi Smart Band 5</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg" alt="Mi Smart Band 5" class="img-fluid mb-3 fixed-image-size">
+                        <p><strong>Brand:</strong> Mi</p>
+                        <p><strong>Description:</strong> The Mi Smart Band 5 features a full-color AMOLED display, 11 sports modes, 24-hour heart rate monitoring, and a long battery life. Ideal for fitness enthusiasts.</p>
+                        <p><strong>Price:</strong> 2,499/-</p>
+                        <div class="star"><p><strong>Rating:</strong> 
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addToCart(132, 'Mi Smart Band 5', 2499, 'https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg')">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <div class="col-12 col-md-3 mb-3">
+            <div class="products text-center">
+                <img src="https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <div class="product_info">
+                    <span>HP</span>
+                    <h5>HP Pavilion x360</h5>
+                    <div class="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="col-10 order-0 ml-3">
+                            <h4>56,500/-</h4>
+                        </div>
+                    </div> 
+                    <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal6">View Details</button>
+                   </div>
+            </div>
+        </div>  
+         <!-- Modal for HP Pavilion x360 -->
+         <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModal6Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="productModal6Label">HP Pavilion x360</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+                      <p><strong>Brand:</strong> HP</p>
+                      <p><strong>Description:</strong> The HP Pavilion x360 is a versatile convertible laptop featuring a responsive touchscreen, powerful Intel processor, and sleek design, ideal for both work and entertainment.</p>
+                      <p><strong>Price:</strong> 56,500/-</p>
+                      <div class="star"><p><strong>Rating:</strong> 
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="addToCart(126, 'HP Pavilion x360', 56500, 'https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+                  </div>
+              </div>
+          </div>
+      </div>     
+                
+    </div>
+  </div>
+ 
+<script>
+    function addToCart(id, name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingItem = cart.find(item => item.id === id);
+    
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ id, name, price, image, quantity: 1 });
+        }
+    
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product added to cart!");
+    }
+    </script>
+</body>
+</html>

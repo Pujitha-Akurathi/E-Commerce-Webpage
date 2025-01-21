@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Add Bootstrap CSS and JS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="cart.js"></script>
+   <link href="st1.css" rel="stylesheet">
+   <script src="sc1.js"></script>
+  <style>
+    
+  /* Reduce padding of the navbar */
+  .navbar {
+    padding: 0.6rem 1rem; /* Adjust top/bottom and left/right padding */
+  }
+
+  /* Adjust the height of the logo image */
+  .navbar .logo-img {
+    max-height: 50px; /* Reduce the logo height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.7rem 0.8rem; /* Adjust padding inside links */
+  }
+
+  /* Adjust the navbar-toggler button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Smaller button */
+  }
+</style>
+
+  
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="mainpage.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ05aBieff9Y2WkD_CgiPJzNqdj1byJkDSUFY1E4lU2usC8azw6ttQVU6-BK78f1ERPdQ&usqp=CAU" alt="Logo" class="logo-img">
+    </a>
+    <a class="navbar-brand" href="#">ShopEase</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ml-auto">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="mainpage.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="fashion.html">Fashion</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="electronics.html" >Electronics <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="grocery.html">Groceries
+                </a>
+                
+              </li>
+              <a href="cartpage.html"><li class="nav-item"><i  class="bi bi-cart4 nav-link"></i></li></a>
+              <li class="nav-item">
+                <a class="nav-link" href="loginform.html"><i class="bi bi-person-circle"></i></a>
+              </li>
+            </ul>
+            
+          </div>
+    </div>
+  </nav>
+<!-- Carousel Container -->
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <!-- Indicators/Dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="banner" style="background-image: url('https://cdn.shopify.com/s/files/1/0516/3761/6830/files/Home_Page_Banner_FR.png?v=1735609392'); padding-right: 50%;">
+          <div class="content">
+            <h1 class="banner_heading">Electronics Sale</h1>
+            <h4 class="banner_desc">Up to 50% Off</h4>
+            <h3 class="banner_desc">Hurry, Limited Time Offer!</h3>
+            <button class="custom_button">SHOP NOW</button>
+        </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="banner" style="background-image: url('https://t4.ftcdn.net/jpg/02/69/15/39/360_F_269153974_8x5Mbf1vYy67OKDq7mArqXN5gZvixMnw.jpg');padding-right: 50%;">
+          <div class="content">
+            <h1 class="banner_heading">Mega Electronics Sale</h1>
+            <h4 class="banner_desc">Flat 30% - 70% Off</h4>
+            <h3 class="banner_desc">Grab the Best Deals Now!</h3>
+            <button class="custom_button">SHOP NOW</button>
+        </div>
+        </div>
+    </div>
+    
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="banner" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240812/pngtree-top-view-open-music-book-headphones-pen-and-laptop-on-red-image_16129408.jpg'); padding-right: 50%;">
+          <div class="content">
+            <h1 class="banner_heading">Tech Deals Bonanza</h1>
+            <h4 class="banner_desc">Up to 60% Off on Top Electronics</h4>
+            <h3 class="banner_desc">Shop Now and Save Big!</h3>
+            <button class="custom_button">EXPLORE NOW</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Controls/Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4><span class="highlight">Moblies</span></h4>
+        <br>
+      </div>
+      <!-- Product 1 -->
+      <div class="col-12 col-md-3 mb-3">
+        <div class="products text-center">
+          <img src="https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+          <div class="product_info">
+            <span>Apple</span>
+            <h5>iPhone 15 Pro Max</h5>
+            <div class="star">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="col-10 order-0 ml-3">
+                <h4>149999/-</h4>
+              </div>
+            </div>
+            <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal1">View Details</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Product Modals -1 -->
+      <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModal1Label">iPhone 15 Pro Max</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+              <p><strong>Brand:</strong> Apple</p>
+              <p><strong>Description:</strong> The iPhone 15 Pro Max offers unparalleled performance with its new A17 chip, 5G connectivity, and a pro-level camera system for stunning photos and videos.</p>
+              <p><strong>Price:</strong>  149999/-</p>
+            <!-- Rating with Half Star and Gold Color -->
+            <div class="star"><p><strong>Rating:</strong> 
+            
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="addToCart(121, 'iPhone 15 Pro Max', 149999, 'https://m.media-amazon.com/images/I/41JrUCWNjHL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://m.media-amazon.com/images/I/31W9+sE8McL._SY300_SX300_.jpg" alt="">
+      <div class="product_info">
+        <span>Samsung</span>
+        <h5>Samsung S23 Ultra</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>124999/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal2">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 2 -->
+  <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal2Label">Samsung S23 Ultra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://m.media-amazon.com/images/I/31W9+sE8McL._SY300_SX300_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Samsung</p>
+          <p><strong>Description:</strong>  The Samsung Galaxy S23 Ultra offers a stunning display, powerful performance, and a versatile camera system, making it the ultimate flagship device for tech enthusiasts.</p>
+          <p><strong>Price:</strong> 124999/-</p>
+          <div class="star"><p><strong>Rating:</strong> 
+            
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(122, 'Samsung S23 Ultra', 124999, 'https://m.media-amazon.com/images/I/31W9+sE8McL._SY300_SX300_.jpg')">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            <!-- Product 3 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://m.media-amazon.com/images/I/418rmVFVCAL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+      <div class="product_info">
+        <span>OnePlus</span>
+        <h5>OnePlus 10 Pro</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>65999/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal3">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 3 -->
+  <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal3Label">OnePlus 10 Pro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://m.media-amazon.com/images/I/418rmVFVCAL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong>OnePlus</p>
+          <p><strong>Description:</strong> The OnePlus 10 Pro features a stunning AMOLED display, Snapdragon 8 Gen 1 chipset, and a powerful camera system, designed for high performance and immersive experiences.</p>
+          <p><strong>Price:</strong>65999/-</p>
+          <div class="star"><p><strong>Rating:</strong> 
+            
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(123, 'OnePlus 10 Pro', 65999, 'https://m.media-amazon.com/images/I/418rmVFVCAL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          
+          <!-- Product 4 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://m.media-amazon.com/images/I/41+OkeyntgL._SY300_SX300_.jpg" alt="">
+      <div class="product_info">
+        <span>iQOO</span>
+        <h5>iQOO 11</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>54999/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal4">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 4 -->
+  <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal4Label">iQOO 11</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://m.media-amazon.com/images/I/41+OkeyntgL._SY300_SX300_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> iQOO</p>
+          <p><strong>Description:</strong> The iQOO 11 features an AMOLED display, a powerful Snapdragon 8 Gen 2 chipset, and a fast charging 5000mAh battery to ensure a smooth and powerful user experience.</p>
+          <p><strong>Price:</strong> 54999/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(124, 'iQOO 11',54999 , 'https://m.media-amazon.com/images/I/41+OkeyntgL._SY300_SX300_.jpg')">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h4> <span class="highlight">Laptops</h4>
+                  <br>
+                </div>
+                
+
+                <div class="col-12 col-md-3 mb-3">
+                  <div class="products text-center">
+                      <img src="https://m.media-amazon.com/images/I/719C6bJv8jL._SX679_.jpg" alt="">
+                      <div class="product_info">
+                          <span>Apple</span>
+                          <h5>MacBook Air</h5>
+                          <div class="star">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="d-flex flex-row">
+                              <div class="col-10 order-0 ml-3">
+                                  <h4>99999/-</h4>
+                              </div>
+                          </div>
+                          <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal5">View Details</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Modal for MacBook Air -->
+              <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModal5Label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="productModal5Label">MacBook Air</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <img src="https://m.media-amazon.com/images/I/719C6bJv8jL._SX679_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+                              <p><strong>Brand:</strong> Apple</p>
+                              <p><strong>Description:</strong> The MacBook Air is a sleek and powerful laptop with Apple's M2 chip, a Retina display, and all-day battery life, perfect for productivity and creativity.</p>
+                              <p><strong>Price:</strong> 99999/-</p>
+                              <div class="star"><p><strong>Rating:</strong> 
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="addToCart(125, 'MacBook Air', 99999, 'https://m.media-amazon.com/images/I/719C6bJv8jL._SX679_.jpg')">Add to Cart</button>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+  
+  
+              <div class="col-12 col-md-3 mb-3">
+                <div class="products text-center">
+                    <img src="https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                    <div class="product_info">
+                        <span>HP</span>
+                        <h5>HP Pavilion x360</h5>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-10 order-0 ml-3">
+                                <h4>56,500/-</h4>
+                            </div>
+                        </div>
+                        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal6">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for HP Pavilion x360 -->
+            <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModal6Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModal6Label">HP Pavilion x360</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+                            <p><strong>Brand:</strong> HP</p>
+                            <p><strong>Description:</strong> The HP Pavilion x360 is a versatile convertible laptop featuring a responsive touchscreen, powerful Intel processor, and sleek design, ideal for both work and entertainment.</p>
+                            <p><strong>Price:</strong> 56,500/-</p>
+                            <div class="star"><p><strong>Rating:</strong> 
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="addToCart(126, 'HP Pavilion x360', 56500, 'https://m.media-amazon.com/images/I/41zRPE0MvvL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+  
+  
+            <div class="col-12 col-md-3 mb-3">
+              <div class="products text-center">
+                  <img src="https://m.media-amazon.com/images/I/81y84xvX86L._SX679_.jpg" alt="">
+                  <div class="product_info">
+                      <span>Dell</span>
+                      <h5>Dell Inspiron 5430</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3">
+                              <h4>72,500/-</h4>
+                          </div>
+                      </div>
+                      <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal7">View Details</button>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Modal for Dell Inspiron 5430 -->
+          <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModal7Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModal7Label">Dell Inspiron 5430</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="https://m.media-amazon.com/images/I/81y84xvX86L._SX679_.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+                          <p><strong>Brand:</strong> Dell</p>
+                          <p><strong>Description:</strong> The Dell Inspiron 5430 offers a sleek design, reliable performance with the latest Intel processors, and a vibrant display, making it perfect for both productivity and entertainment.</p>
+                          <p><strong>Price:</strong> 72,500/-</p>
+                          <div class="star"><p><strong>Rating:</strong> 
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="addToCart(127, 'Dell Inspiron 5430', 72500, 'https://m.media-amazon.com/images/I/81y84xvX86L._SX679_.jpg')">Add to Cart</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-12 col-md-3 mb-3">
+            <div class="products text-center">
+                <img src="https://m.economictimes.com/thumb/msid-111412729,width-1200,height-1200,resizemode-4,imgsize-16324/asus-laptop.jpg" alt="ASUS Vivo Notebook">
+                <div class="product_info">
+                    <span>ASUS</span>
+                    <h5>ASUS Vivo Notebook</h5>
+                    <div class="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="col-10 order-0 ml-3">
+                            <h4>65,000/-</h4>
+                        </div>
+                    </div>
+                    <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal8">View Details</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for ASUS Vivo Notebook -->
+        <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModal8Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModal8Label">ASUS Vivo Notebook</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="https://m.economictimes.com/thumb/msid-111412729,width-1200,height-1200,resizemode-4,imgsize-16324/asus-laptop.jpg" alt="ASUS Vivo Notebook" class="img-fluid mb-3 fixed-image-size">
+                        <p><strong>Brand:</strong> ASUS</p>
+                        <p><strong>Description:</strong> The ASUS Vivo Notebook combines modern design, powerful hardware, and an excellent display, making it ideal for work, study, and entertainment.</p>
+                        <p><strong>Price:</strong> 65,000/-</p>
+                        <div class="star"><p><strong>Rating:</strong>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addToCart(128, 'ASUS Vivo Notebook', 65000, 'https://m.economictimes.com/thumb/msid-111412729,width-1200,height-1200,resizemode-4,imgsize-16324/asus-laptop.jpg')">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+          </div>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <h4> <span class="highlight">Smart Watches</h4>
+                      <br>
+                    
+                  </div>
+                  
+                  <div class="col-12 col-md-3 mb-3">
+                    <div class="products text-center">
+                        <img src="https://m.media-amazon.com/images/I/71uOgDy40BL._SX679_.jpg" alt="Apple Watch Series 8">
+                        <div class="product_info">
+                            <span>Apple</span>
+                            <h5>Apple Watch Series 8</h5>
+                            <div class="star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-10 order-0 ml-3">
+                                    <h4>45,999/-</h4>
+                                </div>
+                            </div>
+                            <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal9">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Apple Watch Series 8 -->
+                <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModal9Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productModal9Label">Apple Watch Series 8</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://m.media-amazon.com/images/I/71uOgDy40BL._SX679_.jpg" alt="Apple Watch Series 8" class="img-fluid mb-3 fixed-image-size">
+                                <p><strong>Brand:</strong> Apple</p>
+                                <p><strong>Description:</strong> The Apple Watch Series 8 offers advanced health monitoring, seamless connectivity with iPhone, and a sleek, customizable design. Perfect for staying connected and active on the go.</p>
+                                <p><strong>Price:</strong> 45,999/-</p>
+                                <div class="star"><p><strong>Rating:</strong> 
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="addToCart(129, 'Apple Watch Series 8', 45999, 'https://m.media-amazon.com/images/I/71uOgDy40BL._SX679_.jpg')">Add to Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+  
+                <div class="col-12 col-md-3 mb-3">
+                  <div class="products text-center">
+                      <img src="https://m.media-amazon.com/images/I/41IJe7fK2OL._SX300_SY300_QL70_FMwebp_.jpg" alt="Galaxy Watch 6">
+                      <div class="product_info">
+                          <span>Samsung</span>
+                          <h5>Galaxy Watch 6</h5>
+                          <div class="star">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star"></i>
+                          </div>
+                          <div class="d-flex flex-row">
+                              <div class="col-10 order-0 ml-3">
+                                  <h4>36,999/-</h4>
+                              </div>
+                          </div>
+                          <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal10">View Details</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Modal for Galaxy Watch 6 -->
+              <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModal10Label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="productModal10Label">Galaxy Watch 6</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <img src="https://m.media-amazon.com/images/I/41IJe7fK2OL._SX300_SY300_QL70_FMwebp_.jpg" alt="Galaxy Watch 6" class="img-fluid mb-3 fixed-image-size">
+                              <p><strong>Brand:</strong> Samsung</p>
+                              <p><strong>Description:</strong> The Galaxy Watch 6 provides advanced fitness tracking, health monitoring, and seamless integration with your Samsung Galaxy devices, making it your ultimate lifestyle companion.</p>
+                              <p><strong>Price:</strong> 36,999/-</p>
+                              <div class="star"><p><strong>Rating:</strong>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star"></i>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="addToCart(130, 'Galaxy Watch 6', 36999, 'https://m.media-amazon.com/images/I/41IJe7fK2OL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-3 mb-3">
+                <div class="products text-center">
+                    <img src="https://m.media-amazon.com/images/I/41r1d8a2WGL._SX300_SY300_QL70_FMwebp_.jpg" alt="Firebolt Visionary 1.78">
+                    <div class="product_info">
+                        <span>Firebolt</span>
+                        <h5>Firebolt Visionary 1.78</h5>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-10 order-0 ml-3">
+                                <h4>12,999/-</h4>
+                            </div>
+                        </div>
+                        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal11">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for Firebolt Visionary 1.78 -->
+            <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModal11Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModal11Label">Firebolt Visionary 1.78</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://m.media-amazon.com/images/I/41r1d8a2WGL._SX300_SY300_QL70_FMwebp_.jpg" alt="Firebolt Visionary 1.78" class="img-fluid mb-3 fixed-image-size">
+                            <p><strong>Brand:</strong> Firebolt</p>
+                            <p><strong>Description:</strong> The Firebolt Visionary 1.78 offers a high-resolution AMOLED display, advanced health tracking, and a sleek design. Perfect for those seeking both functionality and style in a smartwatch.</p>
+                            <p><strong>Price:</strong> 12,999/-</p>
+                            <div class="star"><p><strong>Rating:</strong> 
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="addToCart(131, 'Firebolt Visionary 1.78', 12999, 'https://m.media-amazon.com/images/I/41r1d8a2WGL._SX300_SY300_QL70_FMwebp_.jpg')">Add to Cart</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-12 col-md-3 mb-3">
+              <div class="products text-center">
+                  <img src="https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg" alt="Mi Smart Band 5">
+                  <div class="product_info">
+                      <span>Mi</span>
+                      <h5>Mi Smart Band 5</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3">
+                              <h4>2,499/-</h4>
+                          </div>
+                      </div>
+                      <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal12">View Details</button>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Modal for Mi Smart Band 5 -->
+          <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModal12Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModal12Label">Mi Smart Band 5</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg" alt="Mi Smart Band 5" class="img-fluid mb-3 fixed-image-size">
+                          <p><strong>Brand:</strong> Mi</p>
+                          <p><strong>Description:</strong> The Mi Smart Band 5 features a full-color AMOLED display, 11 sports modes, 24-hour heart rate monitoring, and a long battery life. Ideal for fitness enthusiasts.</p>
+                          <p><strong>Price:</strong> 2,499/-</p>
+                          <div class="star"><p><strong>Rating:</strong> 
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star"></i>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="addToCart(132, 'Mi Smart Band 5', 2499, 'https://i02.appmifile.com/751_operator_in/26/09/2020/97073b3325ecd26d7f2ff87e63b680fa.jpg')">Add to Cart</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+  
+              </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <h3>EarBuds</h3>
+                    <br>
+                  </div>
+                  
+                  <div class="col-12 col-md-3 mb-3">
+                    <div class="products text-center">
+                        <img src="https://m.media-amazon.com/images/I/61LKTD-YnrL.jpg" alt="Realme Narzo 50A">
+                        <div class="product_info">
+                            <span>Realme</span>
+                            <h5>Realme Narzo 50A</h5>
+                            <div class="star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-10 order-0 ml-3">
+                                    <h4>11,999/-</h4>
+                                </div>
+                            </div>
+                            <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal13">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Realme Narzo 50A -->
+                <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModal13Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productModal13Label">Realme Narzo 50A</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://m.media-amazon.com/images/I/61LKTD-YnrL.jpg" alt="Realme Narzo 50A" class="img-fluid mb-3 fixed-image-size">
+                                <p><strong>Brand:</strong> Realme</p>
+                                <p><strong>Description:</strong> The Realme Narzo 50A features a powerful 50 MP camera, massive 6000mAh battery, and a smooth 6.5-inch display, offering great value for an entry-level smartphone.</p>
+                                <p><strong>Price:</strong> 11,999/-</p>
+                                <div class="star"><p><strong>Rating:</strong> 
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="addToCart(133, 'Realme Narzo 50A', 11999, 'https://m.media-amazon.com/images/I/61LKTD-YnrL.jpg')">Add to Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-3 mb-3">
+                  <div class="products text-center">
+                      <img src="https://www.bigcmobiles.com/media/catalog/product/cache/e19e56cdd4cf1b4ec073d4305f5db95a/o/n/oneplus_nord_buds_3_pro_tws_earbuds_starry_black-1.jpg" alt="OnePlus Nord Buds 3 Pro">
+                      <div class="product_info">
+                          <span>OnePlus</span>
+                          <h5>OnePlus Nord Buds 3 Pro</h5>
+                          <div class="star">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star"></i>
+                              <i class="bi bi-star"></i>
+                          </div>
+                          <div class="d-flex flex-row">
+                              <div class="col-10 order-0 ml-3">
+                                  <h4>5,999/-</h4>
+                              </div>
+                          </div>
+                          <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal14">View Details</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Modal for OnePlus Nord Buds 3 Pro -->
+              <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModal14Label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="productModal14Label">OnePlus Nord Buds 3 Pro</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <img src="https://www.bigcmobiles.com/media/catalog/product/cache/e19e56cdd4cf1b4ec073d4305f5db95a/o/n/oneplus_nord_buds_3_pro_tws_earbuds_starry_black-1.jpg" alt="OnePlus Nord Buds 3 Pro" class="img-fluid mb-3 fixed-image-size">
+                              <p><strong>Brand:</strong> OnePlus</p>
+                              <p><strong>Description:</strong> The OnePlus Nord Buds 3 Pro deliver rich sound with active noise cancellation, long-lasting battery, and an ergonomic design for ultimate comfort and audio quality.</p>
+                              <p><strong>Price:</strong> 5,999/-</p>
+                              <div class="star"><p><strong>Rating:</strong> 
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star"></i>
+                                  <i class="bi bi-star"></i>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="addToCart(134, 'OnePlus Nord Buds 3 Pro', 5999, 'https://www.bigcmobiles.com/media/catalog/product/cache/e19e56cdd4cf1b4ec073d4305f5db95a/o/n/oneplus_nord_buds_3_pro_tws_earbuds_starry_black-1.jpg')">Add to Cart</button>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-md-3 mb-3">
+                <div class="products text-center">
+                    <img src="https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg" alt="boAt Airdopes 131">
+                    <div class="product_info">
+                        <span>boAt</span>
+                        <h5>boAt Airdopes 131</h5>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="col-10 order-0 ml-3">
+                                <h4>1,499/-</h4>
+                            </div>
+                        </div>
+                        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal15">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for boAt Airdopes 131 -->
+            <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModal15Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModal15Label">boAt Airdopes 131</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg" alt="boAt Airdopes 131" class="img-fluid mb-3 fixed-image-size">
+                            <p><strong>Brand:</strong> boAt</p>
+                            <p><strong>Description:</strong> The boAt Airdopes 131 offers great sound, a sleek design, and long-lasting battery life for a premium wireless earbud experience, featuring Bluetooth 5.0 connectivity.</p>
+                            <p><strong>Price:</strong> 1,499/-</p>
+                            <div class="star"><p><strong>Rating:</strong> 
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="addToCart(135, 'boAt Airdopes 131', 1499, 'https://m.media-amazon.com/images/I/61RBK+L3CKL.jpg')">Add to Cart</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+              <div class="products text-center">
+                  <img src="https://www.lotmobiles.com/media/catalog/product/cache/05601561d691db05bc58d209301463ac/f/i/fire_boltt_melody_501_tws_earbuds.jpg" alt="Fire Boltt Aura">
+                  <div class="product_info">
+                      <span>Fire Boltt</span>
+                      <h5>Fire Boltt Aura</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                          <i class="bi bi-star"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3">
+                              <h4>1,999/-</h4>
+                          </div>
+                      </div>
+                      <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal16">View Details</button>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Modal for Fire Boltt Aura -->
+          <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModal16Label" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModal16Label">Fire Boltt Aura</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="https://www.lotmobiles.com/media/catalog/product/cache/05601561d691db05bc58d209301463ac/f/i/fire_boltt_melody_501_tws_earbuds.jpg" alt="Fire Boltt Aura" class="img-fluid mb-3 fixed-image-size">
+                          <p><strong>Brand:</strong> Fire Boltt</p>
+                          <p><strong>Description:</strong> The Fire Boltt Aura offers a true wireless experience with crisp sound quality, ergonomic design, and long-lasting battery life, perfect for music lovers and calls.</p>
+                          <p><strong>Price:</strong> 1,999/-</p>
+                          <div class="star"><p><strong>Rating:</strong> 
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                              <i class="bi bi-star"></i>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="addToCart(136, 'Fire Boltt Aura', 1999, 'https://www.lotmobiles.com/media/catalog/product/cache/05601561d691db05bc58d209301463ac/f/i/fire_boltt_melody_501_tws_earbuds.jpg')">Add to Cart</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+                      
+  
+              </div>
+            </div>
+<script> 
+   
+              function addToCart(id, name, price, image) {
+                  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  const existingItem = cart.find(item => item.id === id);
+              
+                  if (existingItem) {
+                      existingItem.quantity++;
+                  } else {
+                      cart.push({ id, name, price, image, quantity: 1 });
+                  }
+              
+                  localStorage.setItem("cart", JSON.stringify(cart));
+                  alert("Product added to cart!");
+              }
+             
+</script>
+
+
+
+        </body>
+</html>

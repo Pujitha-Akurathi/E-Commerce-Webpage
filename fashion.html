@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Add Bootstrap CSS and JS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="cart.js"></script>
+   
+   <link href="st1.css" rel="stylesheet">
+   <script src="sc1.js"></script>
+   
+   <style>
+     /* Reduce padding of the navbar */
+  .navbar {
+    padding: 0.6rem 1rem; /* Adjust top/bottom and left/right padding */
+  }
+
+  /* Adjust the height of the logo image */
+  .navbar .logo-img {
+    max-height: 50px; /* Reduce the logo height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.7rem 0.8rem; /* Adjust padding inside links */
+  }
+
+  /* Adjust the navbar-toggler button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Smaller button */
+  }
+   </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="mainpage.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ05aBieff9Y2WkD_CgiPJzNqdj1byJkDSUFY1E4lU2usC8azw6ttQVU6-BK78f1ERPdQ&usqp=CAU" alt="Logo" class="logo-img">
+    </a>
+    <a class="navbar-brand" href="#">ShopEase</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ml-auto">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="mainpage.html">Home</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="fashion.html">Fashion<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="electronics.html" >Electronics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="grocery.html"> Groceries
+                </a>
+                
+              </li>
+              <a href="cartpage.html"><li class="nav-item"><i  class="bi bi-cart4 nav-link"></i></li></a>
+              <li class="nav-item">
+                <a class="nav-link" href="loginform.html"><i class="bi bi-person-circle"></i></a>
+              </li>
+            </ul>
+            
+          </div>
+    </div>
+  </nav>
+<!-- Carousel Container -->
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <!-- Indicators/Dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="banner" style="background-image: url('https://palladiumahmedabad.s3.ap-south-1.amazonaws.com/MallImages/14022023064837795_mallban.jpg'); padding-right: 20%;">
+          <div class="content">
+            <h1 class="banner_heading">G A P</h1>
+            <h4 class="banner_desc">Black Friday Sale</h4>
+            <h3 class="banner_desc">MIN. 30%</h3>
+            <button class="custom_button">SHOP NOW</button>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="banner" style="background-image: url('https://wallpapercave.com/wp/wp10668538.jpg'); padding-right: 20%;">
+          <div class="content">
+            <h1 class="banner_heading">H&M</h1>
+            <h4 class="banner_desc">Winter Sale</h4>
+            <h3 class="banner_desc">UP TO 50% OFF</h3>
+            <button class="custom_button">SHOP NOW</button>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="banner" style="background-image: url('https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?cs=srgb&dl=pexels-kowalievska-1126993.jpg&fm=jpg'); padding-right: 20%;">
+          <div class="content">
+            <h1 class="banner_heading">ZARA</h1>
+            <h4 class="banner_desc">Exclusive Deals</h4>
+            <h3 class="banner_desc">FLAT 40%</h3>
+            <button class="custom_button">SHOP NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Controls/Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4><span class="highlight">MEN'S</span> Wear</h4>
+        <br>
+      </div>
+
+      <!-- Product 1 -->
+      <div class="col-12 col-md-3 mb-3">
+        <div class="products text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFlAmz0etkmJK2E7xmKHlVHd190KrgRaC6QQ&usqp=CAU" alt="">
+          <div class="product_info">
+            <span>Adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="col-10 order-0 ml-3">
+                <h4>1750/-</h4>
+              </div>
+            </div>
+            <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal1">View Details</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Product Modals -1 -->
+      <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModal1Label">Cartoon Astronaut T-shirts</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFlAmz0etkmJK2E7xmKHlVHd190KrgRaC6QQ&usqp=CAU" alt="" class="img-fluid mb-3 fixed-image-size">
+              <p><strong>Brand:</strong> Adidas</p>
+              <p><strong>Description:</strong> High-quality t-shirt featuring a cartoon astronaut design. Perfect for casual wear.</p>
+              <p><strong>Price:</strong> 1750/-</p>
+            <!-- Rating with Half Star and Gold Color -->
+            <div class="star"><p><strong>Rating:</strong> 
+            
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="addToCart(101, 'Cartoon Astronaut T-shirts', 1750, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFlAmz0etkmJK2E7xmKHlVHd190KrgRaC6QQ&usqp=CAU')">Add to Cart</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg" alt="">
+      <div class="product_info">
+        <span>Sultan</span>
+        <h5>Kurta and Dhoti Pant Set</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>1399/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal2">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 2 -->
+  <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal2Label">Kurta and Dhoti Pant Set</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Sultan</p>
+          <p><strong>Description:</strong> Traditional Kurta and Dhoti Pant Set, ideal for weddings and festive occasions.</p>
+          <p><strong>Price:</strong> 1399/-</p>
+          <div class="star"><p><strong>Rating:</strong> 
+            
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(102, 'Kurta and Dhoti Pant Set', 1399, 'https://5.imimg.com/data5/YT/CB/PS/SELLER-93969960/men-kurta-waistcoat-and-dhoti-pant-set.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            <!-- Product 3 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://www.gapcanada.ca/webcontent/0054/498/654/cn54498654.jpg" alt="">
+      <div class="product_info">
+        <span>GAP</span>
+        <h5>Arch Logo Hoodie</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>2000/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal3">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 3 -->
+  <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal3Label">Arch Logo Hoodie</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://www.gapcanada.ca/webcontent/0054/498/654/cn54498654.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> GAP</p>
+          <p><strong>Description:</strong> Comfortable hoodie with the iconic Arch logo design. Perfect for casual wear.</p>
+          <p><strong>Price:</strong> 2000/-</p>
+          <div class="star"><p><strong>Rating:</strong> 
+            
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(103, 'Arch Logo Hoodie', 2000, 'https://www.gapcanada.ca/webcontent/0054/498/654/cn54498654.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          
+          <!-- Product 4 -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://www.jiomart.com/images/product/original/rvjfdjojbc/outluk-brand-men-digital-printed-round-neck-kurta-pajama-set-a-fusion-of-style-and-comfort-product-images-rvjfdjojbc-0-202305152217.jpg?im=Resize=(500,630)" alt="">
+      <div class="product_info">
+        <span>Outluk</span>
+        <h5>Kurta Pajama Set</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>3500/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal4">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Product 4 -->
+  <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal4Label">Kurta Pajama Set</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://www.jiomart.com/images/product/original/rvjfdjojbc/outluk-brand-men-digital-printed-round-neck-kurta-pajama-set-a-fusion-of-style-and-comfort-product-images-rvjfdjojbc-0-202305152217.jpg?im=Resize=(500,630)" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Outluk</p>
+          <p><strong>Description:</strong> Stylish kurta pajama set featuring a unique digital print. Comfortable and elegant for all occasions.</p>
+          <p><strong>Price:</strong> 3500/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(104, 'Kurta Pajama Set', 3500, 'https://www.jiomart.com/images/product/original/rvjfdjojbc/outluk-brand-men-digital-printed-round-neck-kurta-pajama-set-a-fusion-of-style-and-comfort-product-images-rvjfdjojbc-0-202305152217.jpg?im=Resize=(500,630)')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h4> <span class="highlight">WOMEN'S</span> Wear</h4>
+                  <br>
+                </div>
+                
+<!-- Product: Kanchipuram Silk Saree -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://assets0.mirraw.com/images/9996652/MAH_SUR_59_zoom.jpg?1645591086" alt="">
+      <div class="product_info">
+        <h5>Kanchipuram Silk Saree</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>8999/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal8">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Kanchipuram Silk Saree -->
+  <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModal8Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal8Label">Kanchipuram Silk Saree</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://assets0.mirraw.com/images/9996652/MAH_SUR_59_zoom.jpg?1645591086" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Mirraw</p>
+          <p><strong>Description:</strong> Exquisite Kanchipuram silk saree, perfect for weddings and traditional events, featuring intricate designs.</p>
+          <p><strong>Price:</strong> 8999/-</p>
+          <div class="star"><p><strong>Rating:</strong> 
+            
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                </p>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(105, 'Kanchipuram Silk Saree', 8999, 'https://assets0.mirraw.com/images/9996652/MAH_SUR_59_zoom.jpg?1645591086')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+          <!-- Product: Ethnic Wear Lehenga -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg" alt="">
+      <div class="product_info">
+        <h5>Ethnic Wear Lehenga</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>12000/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal5">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Ethnic Wear Lehenga -->
+  <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal5Label">Ethnic Wear Lehenga</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Traditional Wear</p>
+          <p><strong>Description:</strong> Elegant Ethnic Lehenga perfect for weddings and traditional celebrations.</p>
+          <p><strong>Price:</strong> 12000/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(106, 'Ethnic Wear Lehenga', 12000, 'https://i.pinimg.com/474x/76/b3/41/76b341a84b3b1a3a3790c31eea435a03.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+          <!-- Product: Cotton Kurta Set -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/salwar-kurta-dupatta/h/t/1/m-yd-jasmine-pista-ynk-original-imagty9aahch5y47.jpeg?q=90" alt="">
+      <div class="product_info">
+        <h5>Cotton Kurta Set</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>2500/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal6">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Cotton Kurta Set -->
+  <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal6Label">Cotton Kurta Set</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/salwar-kurta-dupatta/h/t/1/m-yd-jasmine-pista-ynk-original-imagty9aahch5y47.jpeg?q=90" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> YNK</p>
+          <p><strong>Description:</strong> Comfortable Cotton Kurta Set, perfect for casual or semi-formal occasions.</p>
+          <p><strong>Price:</strong> 2500/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(107, 'Cotton Kurta Set', 2500, 'https://rukminim2.flixcart.com/image/850/1000/xif0q/salwar-kurta-dupatta/h/t/1/m-yd-jasmine-pista-ynk-original-imagty9aahch5y47.jpeg?q=90')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product: Party Wear Dress -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://pakibridals.com/wp-content/uploads/2021/12/Bridal-Valeema-Dress-Aqua-color-798-cover.jpg" alt="">
+      <div class="product_info">
+        <h5>Bridals Wear Dress</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>4999/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal7">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Party Wear Dress -->
+  <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModal7Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal7Label">Bridals Wear Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://pakibridals.com/wp-content/uploads/2021/12/Bridal-Valeema-Dress-Aqua-color-798-cover.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Paki Bridals</p>
+          <p><strong>Description:</strong> Elegant party wear dress, perfect for weddings and special events.</p>
+          <p><strong>Price:</strong> 4999/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(117, 'Bridals Wear Dress', 4999, 'https://pakibridals.com/wp-content/uploads/2021/12/Bridal-Valeema-Dress-Aqua-color-798-cover.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            </div>
+          </div>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <h4> <span class="highlight">KIDS</span> Wear</h4>
+                    <br>
+                    <h3>Girls</h3>
+                    <br>
+                  </div>
+                  
+            <!-- Product: Baby Girl Dress -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://images.meesho.com/images/products/209435696/7y9ez_512.webp" alt="">
+      <div class="product_info">
+        <h5>Baby Girl Dress</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>499/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal9">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Baby Girl Dress -->
+  <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModal9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal9Label">Baby Girl Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.meesho.com/images/products/209435696/7y9ez_512.webp" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Meesho</p>
+          <p><strong>Description:</strong> A cute and comfortable baby girl dress, perfect for daily wear and special occasions.</p>
+          <p><strong>Price:</strong> 499/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(109, 'Baby Girl Dress', 499, 'https://images.meesho.com/images/products/209435696/7y9ez_512.webp')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+              <!-- Product: Cotton Partywear Dress -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://images.meesho.com/images/products/258382558/fwiur_512.webp" alt="">
+      <div class="product_info">
+        <h5>Cotton Partywear Dress</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>799/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal10">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Cotton Partywear Dress -->
+  <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModal10Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal10Label">Cotton Partywear Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.meesho.com/images/products/258382558/fwiur_512.webp" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Meesho</p>
+          <p><strong>Description:</strong> Stylish and comfortable cotton partywear dress, perfect for any casual or semi-formal occasion.</p>
+          <p><strong>Price:</strong> 799/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(110, 'Cotton Partywear Dress', 799, 'https://images.meesho.com/images/products/258382558/fwiur_512.webp')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Product: Embroidered Girl Dress -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://images.meesho.com/images/products/238558088/appbn_512.webp" alt="">
+      <div class="product_info">
+        <h5>Embroidered Girl Dress</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>899/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal11">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Embroidered Girl Dress -->
+  <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModal11Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal11Label">Embroidered Girl Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.meesho.com/images/products/238558088/appbn_512.webp" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Meesho</p>
+          <p><strong>Description:</strong> Beautifully embroidered girl dress perfect for festive and special occasions.</p>
+          <p><strong>Price:</strong> 899/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(118, 'Embroidered Girl Dress', 1750, 'https://images.meesho.com/images/products/238558088/appbn_512.webp')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product: Long Fork -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7bwD4fHIlUHpWL7fnpHjY7YszOgK9ATVbg&usqp=CAU" alt="">
+      <div class="product_info">
+        <h5>Long Fork</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>250/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal12">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Long Fork -->
+  <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModal12Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal12Label">Long Fork</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7bwD4fHIlUHpWL7fnpHjY7YszOgK9ATVbg&usqp=CAU" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Generic</p>
+          <p><strong>Description:</strong> A long fork suitable for serving and grilling purposes. Made of stainless steel for durability.</p>
+          <p><strong>Price:</strong> 250/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(112, 'Long Fork', 250, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7bwD4fHIlUHpWL7fnpHjY7YszOgK9ATVbg&usqp=CAU')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <h3>Boys</h3>
+                    <br>
+                  </div>
+                  
+            <!-- Product: Black Imported Boys Indo Western -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://bluejay.com.my/wp-content/uploads/2021/12/istockphoto-1296361252-170667a.jpg" alt="">
+      <div class="product_info">
+        <h5>Black Imported Boys <br>Indo Western</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>3500/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal13">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Black Imported Boys Indo Western -->
+  <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModal13Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal13Label">Black Imported Boys Indo Western</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://bluejay.com.my/wp-content/uploads/2021/12/istockphoto-1296361252-170667a.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Imported</p>
+          <p><strong>Description:</strong> Stylish Indo Western dress for boys, perfect for formal occasions and festivals. Made with premium fabric for comfort and style.</p>
+          <p><strong>Price:</strong> 3500/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(113, 'Cartoon Astronaut T-shirts', 3500, 'https://bluejay.com.my/wp-content/uploads/2021/12/istockphoto-1296361252-170667a.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+             <!-- Product: Boys Party Wear Dress -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-apparel-combo/w/t/a/6-7-years-pycttp1-py-pinkyou-original-imagp3ffz4s7egja.jpeg?q=20&crop=false" alt="">
+      <div class="product_info">
+        <h5>Boys Party Wear Dress</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>1500/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal14">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Boys Party Wear Dress -->
+  <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModal14Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal14Label">Boys Party Wear Dress</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-apparel-combo/w/t/a/6-7-years-pycttp1-py-pinkyou-original-imagp3ffz4s7egja.jpeg?q=20&crop=false" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Party Wear</p>
+          <p><strong>Description:</strong> Elegant boys' party wear dress, perfect for weddings, formal events, or parties. Comfortable and stylish for your little one.</p>
+          <p><strong>Price:</strong> 1500/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(114, 'Boys Party Wear Dress', 1500, 'https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-apparel-combo/w/t/a/6-7-years-pycttp1-py-pinkyou-original-imagp3ffz4s7egja.jpeg?q=20&crop=false')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product: Baesd -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/23141054/2023/5/11/f2ac7717-05c3-442e-95ca-f45a55de8fbd1683817685014ClothingSet1.jpg" alt="">
+      <div class="product_info">
+        <h5>Baesd</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>2500/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal15">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Baesd -->
+  <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModal15Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal15Label">Baesd</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/23141054/2023/5/11/f2ac7717-05c3-442e-95ca-f45a55de8fbd1683817685014ClothingSet1.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Baesd</p>
+          <p><strong>Description:</strong> Stylish and comfortable clothing set for all occasions. A perfect blend of quality and design.</p>
+          <p><strong>Price:</strong> 2500/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(115, 'Baesd', 2500, 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/23141054/2023/5/11/f2ac7717-05c3-442e-95ca-f45a55de8fbd1683817685014ClothingSet1.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product: Stretch Slim Fit Jeans -->
+<div class="col-12 col-md-3 mb-3">
+    <div class="products text-center">
+      <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg" alt="">
+      <div class="product_info">
+        <h5>Stretch Slim Fit Jeans</h5>
+        <div class="star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="col-10 order-0 ml-3">
+            <h4>1899/-</h4>
+          </div>
+        </div>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal16">View Details</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Stretch Slim Fit Jeans -->
+  <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModal16Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModal16Label">Stretch Slim Fit Jeans</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg" alt="" class="img-fluid mb-3 fixed-image-size">
+          <p><strong>Brand:</strong> Stretch</p>
+          <p><strong>Description:</strong> Comfortable and stylish slim fit jeans with a super stretch fabric. Ideal for casual wear.</p>
+          <p><strong>Price:</strong> 1899/-</p>
+          <div class="star"><p><strong>Rating:</strong>  
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCart(116, 'Stretch Slim Fit Jeans', 1899, 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/21466740/2023/1/9/74be0631-23cd-4dbf-8ab6-babedfbf89e91673254469774SuperstretchSlimFitJeans1.jpg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            </div>
+            <script>
+              function addToCart(id, name, price, image) {
+                  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  const existingItem = cart.find(item => item.id === id);
+              
+                  if (existingItem) {
+                      existingItem.quantity++;
+                  } else {
+                      cart.push({ id, name, price, image, quantity: 1 });
+                  }
+              
+                  localStorage.setItem("cart", JSON.stringify(cart));
+                  alert("Product added to cart!");
+              }
+              </script>
+
+
+
+        </body>
+</html>

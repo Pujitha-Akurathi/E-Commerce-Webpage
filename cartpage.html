@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .cartdiv {
+            border-radius: 10px;
+            background-color: antiquewhite;
+            background-image: url("https://t4.ftcdn.net/jpg/07/85/22/13/360_F_785221395_iPmAyxCoj4Wwi2APZ92YK8WcBsFAdXZr.jpg");
+            padding: 30px;
+            text-align: center;
+            background-size: cover;
+            height: 80rem;
+        }
+
+        .cart-item {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-item img {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .quantity {
+            font-weight: bold;
+        }
+
+        .remove-button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #cartTotal {
+            font-weight: bold;
+        }
+
+        .main-btn {
+            color: #111;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+            border: 2px solid #111;
+            border-radius: 10px;
+            padding: 12px 25px;
+            transition: all 0.42s ease;
+            width: 200px;
+        }
+
+        .main-btn:hover {
+            background-color: green;
+            color: white;
+        }
+        .navbar {
+    padding: 0.6rem 1rem; /* Adjust top/bottom and left/right padding */
+  }
+
+  /* Adjust the height of the logo image */
+  .navbar .logo-img {
+    max-height: 50px; /* Reduce the logo height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.7rem 0.8rem; /* Adjust padding inside links */
+  }
+
+  /* Adjust the navbar-toggler button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Smaller button */
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="mainpage.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ05aBieff9Y2WkD_CgiPJzNqdj1byJkDSUFY1E4lU2usC8azw6ttQVU6-BK78f1ERPdQ&usqp=CAU" alt="Logo" class="logo-img">
+        </a>
+        <a class="navbar-brand" href="#">ShopEase</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="mainpage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="fashion.html">Fashion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="electronics.html">Electronics</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="grocery.html">Groceries</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="cartpage.html"><i class="bi bi-cart4"></i> <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="loginform.html"><i class="bi bi-person-circle"></i></a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </nav>
+
+    <div class="cartdiv" id="cart">
+        <h2 style="text-align: center;color:green;font-size:50px;">Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <p>Total: <i class="bi bi-currency-rupee"></i><span id="cartTotal">0.00</span></p>
+        <a href="payment.html"><button class="main-btn">Buy Now</button></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cartItems = document.getElementById("cartItems");
+            const cartTotal = document.getElementById("cartTotal");
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Your cart is empty!</p>";
+                return;
+            }
+
+            let total = 0;
+            cart.forEach(item => {
+                const cartItem = document.createElement("div");
+                cartItem.classList.add("cart-item");
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-details">
+                        <p>${item.name}</p>
+                        <p>Price: <i class="bi bi-currency-rupee"></i>${item.price}</p>
+                        <p>Quantity: <span class="quantity">${item.quantity}</span></p>
+                    </div>
+                    <button class="remove-button" onclick="removeFromCart(${item.id})">Remove</button>
+                `;
+                cartItems.appendChild(cartItem);
+                total += item.price * item.quantity;
+            });
+
+            cartTotal.textContent = total.toFixed(2);
+        });
+
+        function removeFromCart(id) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const itemIndex = cart.findIndex(item => item.id === id);
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity--;
+
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                location.reload(); // Refresh the page to reflect changes
+            }
+        }
+    </script>
+</body>
+</html>

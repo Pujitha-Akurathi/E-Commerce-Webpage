@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROCERIES</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+<!-- JavaScript (Bootstrap and its dependencies) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cart.js"></script>
+
+    <link href="st1.css" rel="stylesheet">
+   <script src="sc1.js"></script>
+    <style>
+          select{
+  border: solid 1px;
+  padding: 6px 8px;
+  border-radius:20px;
+  width:50%;
+}
+select:focus{
+  outline: solid;
+}
+  h6 {
+    font-family: Lobster, monospace;
+  }
+  .overview{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+  }
+  .viewall{
+    text-align: right;
+  }
+  .body {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    img {
+      border-radius: 40%; /* Make the image rounded */
+      width: px; /* Adjust the width as needed */
+      height: auto;
+      display: block;
+    }
+
+    p {
+      margin-top: 3px; /* Adjust the margin as needed */
+    }
+    /* Reduce padding of the navbar */
+  .navbar {
+    padding: 0.6rem 1rem; /* Adjust top/bottom and left/right padding */
+  }
+
+  /* Adjust the height of the logo image */
+  .navbar .logo-img {
+    max-height: 50px; /* Reduce the logo height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.7rem 0.8rem; /* Adjust padding inside links */
+  }
+
+  /* Adjust the navbar-toggler button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Smaller button */
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="mainpage.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ05aBieff9Y2WkD_CgiPJzNqdj1byJkDSUFY1E4lU2usC8azw6ttQVU6-BK78f1ERPdQ&usqp=CAU" alt="Logo" class="logo-img">
+        </a>
+        <a class="navbar-brand" href="#">ShopEase</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="ml-auto">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="mainpage.html">Home</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="fashion.html">Fashion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="electronics.html" >Electronics</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="grocery.html">
+                      Groceries <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <a href="cartpage.html"><li class="nav-item"><i  class="bi bi-cart4 nav-link"></i></li></a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="loginform.html"><i class="bi bi-person-circle"></i></a>
+                  </li>
+                </ul>
+                
+              </div>
+        </div>
+      </nav>
+    <div class="container-fluid elecbanner d-flex flex-column justify-content-center">
+        <div class="row">
+                <div class="col-12 text-center">
+                    <h1>GROCERIES</h1>
+                    <p>Redeem your offers</p>
+                </div>    
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="body">
+                            <div class="image-container">
+                                <a href="vegetable.html"><img class="overview m-3" src="https://img.freepik.com/free-photo/basket-full-vegetables_1112-316.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1700524800&semt=ais" alt=""></a>
+                            <p>Vegetables</p>
+                            </div>
+                            <div class="image-container">
+                                <a href="fruits.html"><img class="overview m-3" src="https://5.imimg.com/data5/AA/HA/ND/SELLER-98878977/fruits-vegetables-500x500.jpg" alt=""></a>
+                                <p>Fruits</p>
+                            </div>
+                             <div class="image-container">
+                                <a href="attadal.html"><img class="overview m-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYt0jup6YAFxPXHjplRKwyrPoRmZ4z_VS8Hg&s" alt=""></a>
+                                    <p>Atta,Rice & Dal</p>
+                                </div>
+                                 <div class="image-container">
+                                    <a href="oil.html"><img class="overview m-3" src="https://dbohra.com/assets/files/Products/c71ec7df7799267dfe45a2d30322a619.png" alt=""></a>
+                            <p>Oils & Ghee</p>
+                            </div>
+                            <div class="image-container">
+                                <a href="dryfruit.html"><img class="overview m-3" src="https://www.jiomart.com/images/product/original/rvyggrgu8x/happilo-dry-fruit-celebrations-gift-box-aster-130g-product-images-orvyggrgu8x-p591535306-0-202205231059.jpg?im=Resize=(420,420)" alt=""></a>
+                            <p>Dryfruits</p>
+                            </div>
+                            <div class="image-container">
+                                <a href="spices.html"><img class="overview m-3" src="https://img.freepik.com/premium-photo/variety-oriental-spices-wooden-bowls-spoons-scattered-coffee-cinnamon-anise-isolated-white-background_407376-366.jpg" alt=""></a>
+                                 <p>Spices</p>
+                                </div>
+                                <div class="image-container">
+                                    <a href="breakfast.html"><img class="overview m-3" src="https://gifts.thamel.com/image/cache/catalog/Nut%20Asst/Nutritional%20Assortments%20Combo-550x550.jpg" alt=""></a>
+                                     <p>Breakfast <br>Essentials</p>
+                                    </div>
+                    </div>        
+                </div>
+               </div>     
+        </div>
+    </div>
+    <div class="container"> 
+      <div class="row">
+          <div class="col-12">
+              <h4><span class="highlight">FRUITS</span></h4>
+              <br>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                  <img src="https://media.istockphoto.com/id/1134031822/photo/whole-and-half-red-apples-isolated-on-white.jpg?s=170667a&w=0&k=20&c=Z3lfNtDJ4JeHob2_ctH-_2nD-2ttIuysc1DZueraw20=" alt="">
+                  <div class="product_info">
+                      <h5>Apple</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3"><h4>100/- 250gms</h4></div>
+                      </div>
+                      <select name="Quantity">
+                          <option value="Quantity">Quantity</option>
+                          <option value="2KG">2kgs</option>
+                          <option value="1KG">1kg</option>
+                          <option value="500gms">500gms</option>
+                          <option value="250gms">250gms</option>
+                      </select><br><br>
+                      <button class="main-btn" onclick="addToCart(141, 'Apple', 100, 'https://media.istockphoto.com/id/1134031822/photo/whole-and-half-red-apples-isolated-on-white.jpg?s=170667a&w=0&k=20&c=Z3lfNtDJ4JeHob2_ctH-_2nD-2ttIuysc1DZueraw20=')">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                  <img src="https://media.istockphoto.com/id/1344251913/photo/pitaya-or-dragon-fruit.jpg?s=612x612&w=0&k=20&c=CNpFn50xyetVDnabZXLZ_03uq1Ezll1-R2WWiCsx3Fo=" alt="">
+                  <div class="product_info">
+                      <h5>Dragon Fruit</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3"><h4>200/- 500gms</h4></div>
+                      </div>
+                      <select name="Quantity">
+                          <option value="Quantity">Quantity</option>
+                          <option value="2KG">2kgs</option>
+                          <option value="1KG">1kg</option>
+                          <option value="500gms">500gms</option>
+                          <option value="250gms">250gms</option>
+                      </select><br><br>
+                      <button class="main-btn" onclick="addToCart(142, 'Dragon Fruit', 200, 'https://media.istockphoto.com/id/1344251913/photo/pitaya-or-dragon-fruit.jpg?s=612x612&w=0&k=20&c=CNpFn50xyetVDnabZXLZ_03uq1Ezll1-R2WWiCsx3Fo=')">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                  <img src="https://t3.ftcdn.net/jpg/02/86/54/22/360_F_286542273_yMVtKHwjmRKbUVgqTUjW5kDjPqMiw6kk.jpg" alt="">
+                  <div class="product_info">
+                      <h5>Jamun</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3"><h4>120/- 250gms</h4></div>
+                      </div>
+                      <select name="Quantity">
+                          <option value="Quantity">Quantity</option>
+                          <option value="2KG">2kgs</option>
+                          <option value="1KG">1kg</option>
+                          <option value="500gms">500gms</option>
+                          <option value="250gms">250gms</option>
+                      </select><br><br>
+                      <button class="main-btn" onclick="addToCart(143, 'Jamun', 120, 'https://t3.ftcdn.net/jpg/02/86/54/22/360_F_286542273_yMVtKHwjmRKbUVgqTUjW5kDjPqMiw6kk.jpg')">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                  <img src="https://media.istockphoto.com/id/147442784/photo/two-whole-avocados-with-leaves-and-one-half.jpg?s=612x612&w=0&k=20&c=tAawNUYQIaMHLe_qOrHIgz7vHlPMkUsPtuzRteKceO4=" alt="">
+                  <div class="product_info">
+                      <h5>Avocado</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3"><h4>180/- 100gms</h4></div>
+                      </div>
+                      <select name="Quantity">
+                          <option value="Quantity">Quantity</option>
+                          <option value="2KG">2kgs</option>
+                          <option value="1KG">1kg</option>
+                          <option value="500gms">500gms</option>
+                          <option value="250gms">250gms</option>
+                      </select><br><br>
+                      <button class="main-btn" onclick="addToCart(144, 'Avocado', 180, 'https://media.istockphoto.com/id/147442784/photo/two-whole-avocados-with-leaves-and-one-half.jpg?s=612x612&w=0&k=20&c=tAawNUYQIaMHLe_qOrHIgz7vHlPMkUsPtuzRteKceO4=')">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="row">
+          <div class="col-12">
+              <h4><span class="highlight">VEGETABLES</span></h4>
+              <br>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12 col-md-3">
+              <div class="products text-center mb-3">
+                  <img src="https://thumbs.dreamstime.com/b/raw-potatoes-white-background-61790721.jpg" alt="">
+                  <div class="product_info">
+                      <h5>Potatoes</h5>
+                      <div class="star">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex flex-row">
+                          <div class="col-10 order-0 ml-3"><h4>30/- 250gms</h4></div>
+                      </div>
+                      <select name="Quantity">
+                          <option value="Quantity">Quantity</option>
+                          <option value="2KG">2kgs</option>
+                          <option value="1KG">1kg</option>
+                          <option value="500gms">500gms</option>
+                          <option value="250gms">250gms</option>
+                      </select><br><br>
+                      <button class="main-btn" onclick="addToCart(145, 'Potatoes', 30, 'https://thumbs.dreamstime.com/b/raw-potatoes-white-background-61790721.jpg')">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-12 col-md-3">
+            <div class="products text-center mb-3">
+              <img src="https://www.georgeperry.co.uk/images/P/mushrooms.jpg" alt="">
+              <div class="product_info">
+               <h5>Mushrooms</h5>
+              <div class="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             </div>
+            <div class="d-flex flex-row">
+            <div class="col-10 order-0 ml-3"><h4>350/- 200gms</h4></div>
+            </div>
+             <select name="Quantity">
+              <option value="Quantity">Quantity</option>
+               <option value="2KG">2kgs</option>
+             <option value="1KG">1kg</option>
+               <option value="500gms" >500gms</option>
+               <option value="250gms">250gms</option>
+            </select><br><br>
+            <button class="main-btn" onclick="addToCart(146, 'Mushrooms', 350, 'https://www.georgeperry.co.uk/images/P/mushrooms.jpg')">Add to cart</button>
+            </div>
+              </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="products text-center mb-3">
+               <img src="https://st.depositphotos.com/1002351/53151/i/450/depositphotos_531513708-stock-photo-carrot-vegetable-leaves-isolated-white.jpg" alt="">
+             <div class="product_info">
+            <h5>Carrot</h5>
+             <div class="star">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+               </div>
+            <div class="d-flex flex-row">
+               <div class="col-10 order-0 ml-3"><h4>30/- 500gms</h4></div>
+            </div>
+           <select name="Quantity">
+            <option value="Quantity">Quantity</option>
+            <option value="2KG">2kgs</option>
+            <option value="1KG">1kg</option>
+             <option value="500gms" >500gms</option>
+              <option value="250gms">250gms</option>
+               </select><br><br>
+               <button class="main-btn" onclick="addToCart(147, 'Carrot', 30, 'https://st.depositphotos.com/1002351/53151/i/450/depositphotos_531513708-stock-photo-carrot-vegetable-leaves-isolated-white.jpg')">Add to cart</button>
+                </div>
+                </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="products text-center mb-3">
+             <img src="https://gabbarfarms.com/cdn/shop/products/Spinach_1000x.jpg?v=1620713074" alt="">
+                    <div class="product_info">
+                          <h5>Spinach</h5>
+                <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                 <i class="bi bi-star-fill"></i>
+                   <i class="bi bi-star-fill"></i>
+                   <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                     <div class="col-10 order-0 ml-3"><h4>90/- 500gms</h4></div>
+                  </div>
+                 <select name="Quantity">
+                     <option value="Quantity">Quantity</option>
+                 <option value="2KG">2kgs</option>
+                 <option value="1KG">1kg</option>
+                  <option value="500gms" >500gms</option>
+                      <option value="250gms">250gms</option>
+                   </select><br><br>
+                   <button class="main-btn" onclick="addToCart(148, 'Spinach', 90, 'https://gabbarfarms.com/cdn/shop/products/Spinach_1000x.jpg?v=1620713074')">Add to cart</button>
+                                  </div>
+                 </div>
+               </div>
+              
+           </div>  
+         
+          </div>
+
+
+
+                
+                           
+                            </div>
+                            <div class="container">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <h4><span class="highlight">ATTA, RICE & DAL</span></h4>
+                                      <br>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12 col-md-3">
+                                      <div class="products text-center mb-3">
+                                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnP9zimWkW5EUA4IqRjrHhU68ocoUzmpBSw&s" alt="Ragi Flour">
+                                          <div class="product_info">
+                                              <h5>Ragi Flour</h5>
+                                              <div class="star">
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-half"></i>
+                                              </div>
+                                              <div class="price"><h4>180/- KG</h4></div>
+                                              <select name="Quantity">
+                                                  <option value="Quantity">Quantity</option>
+                                                  <option value="2kgs">2kgs</option>
+                                                  <option value="1kg">1kg</option>
+                                                  <option value="500gms">500gms</option>
+                                                  <option value="250gms">250gms</option>
+                                              </select><br><br>
+                                              <button class="main-btn" onclick="addToCart(149, 'Ragi Flour', 180, 'hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnP9zimWkW5EUA4IqRjrHhU68ocoUzmpBSw&s')">Add to cart</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                          
+                                  <div class="col-12 col-md-3">
+                                      <div class="products text-center mb-3">
+                                          <img src="https://www.bigbasket.com/media/uploads/p/xxl/40253092_1-grami-superfood-organic-daliya-broken-wheat-morning-breakfast-food-rich-in-dietary-fibre.jpg" alt="Broken Wheat">
+                                          <div class="product_info">
+                                              <h5>Broken Wheat</h5>
+                                              <div class="star">
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-half"></i>
+                                              </div>
+                                              <div class="price"><h4>120/- KG</h4></div>
+                                              <select name="Quantity">
+                                                  <option value="Quantity">Quantity</option>
+                                                  <option value="2kgs">2kgs</option>
+                                                  <option value="1kg">1kg</option>
+                                                  <option value="500gms">500gms</option>
+                                                  <option value="250gms">250gms</option>
+                                              </select><br><br>
+                                              <button class="main-btn" onclick="addToCart(150, 'Broken Wheat', 120, 'https://www.bigbasket.com/media/uploads/p/xxl/40253092_1-grami-superfood-organic-daliya-broken-wheat-morning-breakfast-food-rich-in-dietary-fibre.jpg')">Add to cart</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                          
+                                  <div class="col-12 col-md-3">
+                                      <div class="products text-center mb-3">
+                                          <img src="https://www.bigbasket.com/media/uploads/p/xxl/40169127_10-elite-chakki-atta.jpg" alt="Atta">
+                                          <div class="product_info">
+                                              <h5>Atta</h5>
+                                              <div class="star">
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-half"></i>
+                                              </div>
+                                              <div class="price"><h4>50/- KG</h4></div>
+                                              <select name="Quantity">
+                                                  <option value="Quantity">Quantity</option>
+                                                  <option value="2kgs">2kgs</option>
+                                                  <option value="1kg">1kg</option>
+                                                  <option value="500gms">500gms</option>
+                                                  <option value="250gms">250gms</option>
+                                              </select><br><br>
+                                              <button class="main-btn" onclick="addToCart(151, 'Atta', 50, 'https://www.bigbasket.com/media/uploads/p/xxl/40169127_10-elite-chakki-atta.jpg')">Add to cart</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                          
+                                  <div class="col-12 col-md-3">
+                                      <div class="products text-center mb-3">
+                                          <img src="https://cdn.shopify.com/s/files/1/0530/4552/6694/files/TATA-Sampann-Organic-Urad-Dal-500g-_FOP.jpg?height=645&pad_color=fff&v=1689790774&width=645" alt="Urad Dal">
+                                          <div class="product_info">
+                                              <h5>Urad Dal</h5>
+                                              <div class="star">
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-fill"></i>
+                                                  <i class="bi bi-star-half"></i>
+                                              </div>
+                                              <div class="price"><h4>100/- KG</h4></div>
+                                              <select name="Quantity">
+                                                  <option value="Quantity">Quantity</option>
+                                                  <option value="2kgs">2kgs</option>
+                                                  <option value="1kg">1kg</option>
+                                                  <option value="500gms">500gms</option>
+                                                  <option value="250gms">250gms</option>
+                                              </select><br><br>
+                                              <button class="main-btn" onclick="addToCart(152, 'Urad Dal', 100, 'https://cdn.shopify.com/s/files/1/0530/4552/6694/files/TATA-Sampann-Organic-Urad-Dal-500g-_FOP.jpg?height=645&pad_color=fff&v=1689790774&width=645')">Add to cart</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <h4><span class="highlight">OILS & GHEE</span></h4>
+          <br>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://4.imimg.com/data4/BP/OF/IOS-5248621/product-500x500.jpeg" alt="Cow Ghee">
+              <div class="product_info">
+                  <h5>Cow Ghee</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="price"><h4>200/- ltr</h4></div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(153, 'Cow Ghee', 200, 'https://4.imimg.com/data4/BP/OF/IOS-5248621/product-500x500.jpeg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/SELLER/Default/2021/7/GU/UR/LF/134036991/freedom-oil-jpg.jpg" alt="Sunflower Oil">
+              <div class="product_info">
+                  <h5>Sunflower Oil</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="price"><h4>150/- ltr</h4></div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(154, 'Sunflower Oil', 150, 'https://5.imimg.com/data5/SELLER/Default/2021/7/GU/UR/LF/134036991/freedom-oil-jpg.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://www.netmeds.com/images/product-v1/600x600/909688/rice_bran_oil_5_litre_0_0.jpg" alt="Rice Bran Oil">
+              <div class="product_info">
+                  <h5>Rice Bran Oil</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="price"><h4>800/- 5ltr</h4></div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(155, 'Rice Bran Oil', 800, 'https://www.netmeds.com/images/product-v1/600x600/909688/rice_bran_oil_5_litre_0_0.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://m.media-amazon.com/images/I/51A1wJmtyAL.jpg" alt="Palm Oil">
+              <div class="product_info">
+                  <h5>Palm Oil</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="price"><h4>120/- ltr</h4></div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(156, 'Palm Oil', 120, 'https://m.media-amazon.com/images/I/51A1wJmtyAL.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <h4><span class="highlight">DRYFRUITS & NUTS</span></h4>
+          <br>
+      </div>
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/HO/QV/NQ/154100906/tim-tim-premium-blueberries-500x500.jpg" alt="Blueberries">
+              <div class="product_info">
+                  <h5>Blueberries</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3">
+                          <h4>400/- KG</h4>
+                      </div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">2kgs</option>
+                      <option value="1KG">1kg</option>
+                      <option value="500gms">500gms</option>
+                      <option value="250gms">250gms</option>
+                  </select>
+                  <br><br>
+                  <button class="main-btn" onclick="addToCart(157, 'Blueberries', 400, 'https://5.imimg.com/data5/SELLER/Default/2022/6/HO/QV/NQ/154100906/tim-tim-premium-blueberries-500x500.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/BY/IE/XF/SELLER-39862493/nutraj-signature-pistachio-kernels-100g-vacuum-pack-500x500.jpg" alt="Pistachios">
+              <div class="product_info">
+                  <h5>Pista</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3">
+                          <h4>350/- KG</h4>
+                      </div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">2kgs</option>
+                      <option value="1KG">1kg</option>
+                      <option value="500gms">500gms</option>
+                      <option value="250gms">250gms</option>
+                  </select>
+                  <br><br>
+                  <button class="main-btn" onclick="addToCart(158, 'Pista', 350, 'https://5.imimg.com/data5/BY/IE/XF/SELLER-39862493/nutraj-signature-pistachio-kernels-100g-vacuum-pack-500x500.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/KI/ZS/DZ/152317219/whatsapp-image-2022-07-02-at-3-51-15-pm-500x500.jpeg" alt="Walnuts">
+              <div class="product_info">
+                  <h5>Walnuts</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3">
+                          <h4>300/- KG</h4>
+                      </div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">2kgs</option>
+                      <option value="1KG">1kg</option>
+                      <option value="500gms">500gms</option>
+                      <option value="250gms">250gms</option>
+                  </select>
+                  <br><br>
+                  <button class="main-btn" onclick="addToCart(159, 'Walnuts', 300, 'https://5.imimg.com/data5/SELLER/Default/2022/7/KI/ZS/DZ/152317219/whatsapp-image-2022-07-02-at-3-51-15-pm-500x500.jpeg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://m.media-amazon.com/images/I/61-HeXX496L.jpg" alt="Almonds">
+              <div class="product_info">
+                  <h5>Almonds</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3">
+                          <h4>250/- KG</h4>
+                      </div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">2kgs</option>
+                      <option value="1KG">1kg</option>
+                      <option value="500gms">500gms</option>
+                      <option value="250gms">250gms</option>
+                  </select>
+                  <br><br>
+                  <button class="main-btn" onclick="addToCart(160, 'Almonds', 250, 'https://m.media-amazon.com/images/I/61-HeXX496L.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <h4><span class="highlight">BREAKFAST ESSENTIALS</span></h4>
+          <br>
+      </div>
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://www.bigbasket.com/media/uploads/p/l/40128455_8-saffola-masala-oats-veggie-twist.jpg" alt="">
+              <div class="product_info">
+                  <h5>Masala Oats</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3"><h4>100/- 500gms</h4></div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">1</option>
+                      <option value="1KG">2</option>
+                      <option value="500gms">3</option>
+                      <option value="250gms">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(161, 'Masala Oats', 100, 'https://www.bigbasket.com/media/uploads/p/l/40128455_8-saffola-masala-oats-veggie-twist.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://m.media-amazon.com/images/I/61TlishHeGL.jpg" alt="">
+              <div class="product_info">
+                  <h5>Vegetable upma</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3"><h4>50/- 500gms</h4></div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">1</option>
+                      <option value="1KG">2</option>
+                      <option value="500gms">3</option>
+                      <option value="250gms">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(162, 'Vegetable upma', 50, 'https://m.media-amazon.com/images/I/61TlishHeGL.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/ZG/GP/SH/148629795/nutberry-peanut-butter-creamy-340gm-500x500.jpg" alt="">
+              <div class="product_info">
+                  <h5>Peanut butter</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3"><h4>150/- 500gms</h4></div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">1</option>
+                      <option value="1KG">2</option>
+                      <option value="500gms">3</option>
+                      <option value="250gms">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(163, 'Peanut butter', 150, 'https://5.imimg.com/data5/SELLER/Default/2022/3/ZG/GP/SH/148629795/nutberry-peanut-butter-creamy-340gm-500x500.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+          <div class="products text-center mb-3">
+              <img src="https://m.media-amazon.com/images/I/71YIEzMQM8L.jpg" alt="">
+              <div class="product_info">
+                  <h5>Knorr Manchow Soup</h5>
+                  <div class="star">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="d-flex flex-row">
+                      <div class="col-10 order-0 ml-3"><h4>15/- 500gms</h4></div>
+                  </div>
+                  <select name="Quantity">
+                      <option value="Quantity">Quantity</option>
+                      <option value="2KG">1</option>
+                      <option value="1KG">2</option>
+                      <option value="500gms">3</option>
+                      <option value="250gms">4</option>
+                  </select><br><br>
+                  <button class="main-btn" onclick="addToCart(164, 'Knorr Manchow Soup', 15, 'https://m.media-amazon.com/images/I/71YIEzMQM8L.jpg')">Add to cart</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+    function addToCart(id, name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingItem = cart.find(item => item.id === id);
+    
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ id, name, price, image, quantity: 1 });
+        }
+    
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product added to cart!");
+    }
+    </script>
+
+</body>
+</html>   
